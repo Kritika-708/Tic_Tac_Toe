@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #e4e8f1; /* Dark background */
+    color: rgb(223, 176, 176);
+    font-family: 'Arial', sans-serif;
+}
+
+nav {
+    background: linear-gradient(135deg, #f5bbee, #745770); /* Pink to purple gradient */
+    color: rgb(244, 240, 240);
+    height: 65px;
+    font-size: 27px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 12px;
+    box-shadow: 0 2px 4px rgba(188, 123, 123, 0.2);
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #1e272f; /* Dark background color on hover */
+}
+
+.gameContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.container {
+    display: grid;
+    grid-template-rows: repeat(3, 10vw);
+    grid-template-columns: repeat(3, 10vw);
+    gap: 10px;
+    position: relative;
+}
+
+.box {
+    border: 2px solid white;
+    font-size: 8vw;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    transition: background-color 0.3s, transform 0.2s;
+    background: linear-gradient(135deg, #df9ed6, #9f6297); /* Pink to purple gradient */
+}
+
+.box:hover {
+    background-color: #907ca5; /* Light purple background */
+    color: rgb(164, 83, 83);
+    transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+.info {
+    font-size: 25px;
+    color: rgb(27, 18, 18);
+    margin-top: 20px;
+    padding: 0 20px;
+}
+
+.gameInfo h1 {
+    font-size: 2.5rem;
+    color: white;
+}
+
+.gameInfo {
+    padding: 0 34px;
+    color: rgb(17, 1, 1);
+}
+
+.imgbox img {
+    display: none;
+}
+
+.br-0 {
+    border-right: 0;
+}
+
+.bl-0 {
+    border-left: 0;
+}
+
+.bt-0 {
+    border-top: 0;
+}
+
+.bb-0 {
+    border-bottom: 0;
+}
+
+#reset {
+    margin: 20px 0;
+    padding: 10px 20px;
+    background: #c87dbe; /* Purple background */
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bolder;
+    color: white;
+    transition: background-color 0.3s;
+}
+
+#reset:hover {
+    background-color: #ff9ff3; /* Pink background on hover */
+}
+
+.line {
+    background-color: rgb(132, 30, 227);
+    height: 3px;
+    width: 0;
+    position: absolute;
+    transition: width 1s ease-in-out;
+}
+
+@media screen and (max-width: 950px) {
+    .gameContainer {
+        flex-wrap: wrap;
+    }
+
+    .gameInfo {
+        margin-top: 34px;
+    }
+
+    .gameInfo h1 {
+        font-size: 1.5rem;
+    }
+
+    .container {
+        grid-template-rows: repeat(3, 20vw);
+        grid-template-columns: repeat(3, 20vw);
+    }
+}
